@@ -1,0 +1,72 @@
+<html>
+<head>
+<style>
+div.header {
+	display: block;
+	text-align: left;
+	position: running(header);
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 40px;
+	height: 50px;
+}
+
+div.footer {
+	display: block;
+	text-align: left;
+	position: running(footer);
+	font-size: 10px;
+	font-family: Arial;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	height: 50px;
+}
+
+@page { @top-center { content:element(header)
+	
+}
+
+}
+@page { @bottom-center { content:element(footer)
+	
+}
+}
+</style>
+</head>
+<body>
+	<div class="header">
+		<div style="float: right">
+			<img
+				src="src/V-6.jpg"
+				alt="Logo" style="width: 100px; height: 50px;"></img>
+		</div>
+	</div>
+	<div class="footer">
+		<div style="float: left; width: 25%">
+			<span>footer1</span><br /> <span>footer1</span><br /> <span>footer13</span><br />
+			<span>footer14</span>
+		</div>
+		<div style="float: left; width: 25%">
+			<span>footer1</span><br /> <span>footer1line2</span><br /> <span>footer13</span><br />
+			<span>footer1</span><br /> <span>footer1</span>
+		</div>
+		<div style="float: left; width: 25%">
+			<span>footer1</span><br /> <span>footer1</span><br /> <span>footer13</span><br />
+			<span>footer14</span>
+		</div>
+		<div style="float: left; width: 25%">
+			<span>footer1</span><br /> <span>footer1line2</span><br /> <span>footer13</span><br />
+			<span>footer1</span><br /> <span>footer1</span>
+		</div>
+	</div>
+	<div>
+		<span>this is where the body puts</span>
+	</div>
+	<div>
+	<iframe src = "src/body.html"></iframe>
+	</div>
+	<span>ifram ended line 1</span>
+</body>
+</html>
