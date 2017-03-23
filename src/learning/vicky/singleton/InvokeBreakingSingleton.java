@@ -13,6 +13,7 @@ public class InvokeBreakingSingleton {
         constructor.setAccessible(true);
         Singleton newInstance = constructor.newInstance();
         System.out.println(instance == newInstance);
+
     }
 
 }
