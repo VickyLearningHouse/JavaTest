@@ -1,17 +1,30 @@
 package learning.vicky.singleton;
 
-import java.io.Serializable;
 
 
-public class Singleton implements Serializable{
+public class Singleton {
 
-    private static Singleton instance = new Singleton();
 
-    private Singleton() {
+    static int i = 0;
+    static{
+        System.out.println("Singleton loading");
+    }
+    private static Singleton instance = new Singleton(4);
+    static int j = 99;
+
+    public Singleton() {
         System.out.println("init");
+        i = 2;
+    }
+
+    public Singleton(int k){
+        i = k;
+        j = k;
+        System.out.println("Singleton: " + Thread.currentThread().getStackTrace().toString());
     }
 
     public static Singleton getInstance() {
+        System.out.println("getInstantce");
         return instance;
     }
 
