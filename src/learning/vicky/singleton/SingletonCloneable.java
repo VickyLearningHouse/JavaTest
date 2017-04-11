@@ -15,7 +15,9 @@ public class SingletonCloneable implements Cloneable {
         this.today = today;
     }
 
-    private SingletonCloneable(){}
+    private SingletonCloneable(){
+        System.out.println("invoke construcor...");
+    }
 
     public static SingletonCloneable getInstance(){
         return instance;
