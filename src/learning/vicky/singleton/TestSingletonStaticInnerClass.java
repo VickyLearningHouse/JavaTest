@@ -7,9 +7,9 @@ public class TestSingletonStaticInnerClass {
 
 
         //System.out.println(SingletonInnerStaticHoldInstance.i);
+//        SingletonInnerStaticHoldInstance instance = new SingletonInnerStaticHoldInstance();
 
-
-       // System.out.println(SingletonInnerStaticHoldInstance.getInstance());
+        System.out.println(SingletonInnerStaticHoldInstance.getInstance());
     }
 
 }

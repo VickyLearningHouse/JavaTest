@@ -1,6 +1,6 @@
 package learning.vicky.singleton;
 
-public enum EnumSeason {
+public enum EnumSeason implements Cloneable{
     Spring, Summer, Autumn, Winter;
 
 

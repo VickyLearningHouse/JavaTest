@@ -14,7 +14,6 @@ public class SingletonLazy {
 
         if (instance == null) {
             synchronized (SingletonLazy.class) {
-                // this check incase one thread is already waiting
                 if (instance == null) {
                     instance = new SingletonLazy();
                 }

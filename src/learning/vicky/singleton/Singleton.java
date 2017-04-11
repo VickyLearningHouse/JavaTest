@@ -2,6 +2,8 @@ package learning.vicky.singleton;
 
 
 
+
+
 public class Singleton {
 
 
@@ -11,20 +13,19 @@ public class Singleton {
     }
     private static Singleton instance = new Singleton(4);
     static int j = 99;
+    public int count = 0;
 
-    public Singleton() {
-        System.out.println("init");
-        i = 2;
-    }
-
-    public Singleton(int k){
+    //http://stackoverflow.com/questions/7910851/java-singleton-prevent-multiple-creation-through-reflection
+    private Singleton(int k){
+        /*ReflectPermission perm = new ReflectPermission("suppressAccessChecks", "");
+        AccessController.checkPermission(perm);*/
         i = k;
         j = k;
         System.out.println("Singleton: " + Thread.currentThread().getStackTrace().toString());
     }
 
     public static Singleton getInstance() {
-        System.out.println("getInstantce");
+        System.out.println("getInstantce method running");
         return instance;
     }
 

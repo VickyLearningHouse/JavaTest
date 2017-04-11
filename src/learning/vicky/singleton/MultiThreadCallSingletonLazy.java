@@ -7,12 +7,12 @@ public class MultiThreadCallSingletonLazy extends Thread{
      * @param args
      */
     public static void main(String[] args) {
-        MultiThreadCallSingletonLazy[] threads = new MultiThreadCallSingletonLazy[100];
-        for(int i=0; i<100; i++){
+        MultiThreadCallSingletonLazy[] threads = new MultiThreadCallSingletonLazy[90000];
+        for(int i=0; i<90000; i++){
             threads[i] = new MultiThreadCallSingletonLazy();
         }
 
-        for(int i=0; i<50; i++){
+        for(int i=0; i<90000; i++){
             threads[i].start();
             threads[++i].start();
         }

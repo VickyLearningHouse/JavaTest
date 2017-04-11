@@ -13,17 +13,17 @@ public class TestSynchronized_0 {
         Thread thread2 = new Thread(new Runnable() {
             @Override
             public void run() {
-                test.test_3();
+                test.test_1();
             }
         }, "thread 2");
         Thread threadNewObj = new Thread(new Runnable() {
             @Override
             public void run() {
-                testNewObject.test_2();
+                testNewObject.test_1();
             }
         }, "thread 3");
-        thread1.start();
-        //thread2.start();
+        //thread1.start();
+        thread2.start();
         threadNewObj.start(); //differ instance hold their own object lock
     }
 

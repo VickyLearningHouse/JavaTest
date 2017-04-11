@@ -1,8 +1,11 @@
 package learning.vicky.singleton;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+
 public class EnumTestCallEnumSeason {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
         /**
          * Protected Object clone() throws exception, never return
          */
@@ -21,6 +24,9 @@ public class EnumTestCallEnumSeason {
         System.out.println("EnumSeason.Spring eaquls Spring? " + EnumSeason.Spring.equals("Spring"));
         System.out.println("Spring get Enum class: " + EnumSeason.Spring.getDeclaringClass());
         System.out.println(EnumSeason.Spring.valueOf(EnumSeason.class,"Spring"));
+
+        System.out.println(EnumSeason.Autumn.getClass().getDeclaredConstructors());
+        Constructor constructor = EnumSeason.Autumn.getDeclaringClass().getDeclaredConstructor(new Class[0]);
     }
 
 }

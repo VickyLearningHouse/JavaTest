@@ -9,9 +9,9 @@ public class InvokeBreakingSingleton {
             IllegalAccessException, IllegalArgumentException, InvocationTargetException {
         Singleton instance = Singleton.getInstance();
         Constructor<Singleton> constructor = (Constructor<Singleton>) instance.getClass().getDeclaredConstructor(
-                new Class[0]);
+                int.class);
         constructor.setAccessible(true);
-        Singleton newInstance = constructor.newInstance();
+        Singleton newInstance = constructor.newInstance(4);
         System.out.println(instance == newInstance);
 
     }
